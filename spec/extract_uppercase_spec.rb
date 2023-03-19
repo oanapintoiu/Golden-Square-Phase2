@@ -1,31 +1,31 @@
 require "extract_uppercase"
 
 RSpec.describe "extract uppercase method" do
-it "returns an empty string given an empty string" do
+  it "returns an empty string given an empty string" do
     expect(extract_uppercase("")).to eq []
-end
+  end
 
-it "returns an empty string given a string with no uppercase" do
+  it "returns an empty string given a string with no uppercase" do
     expect(extract_uppercase("hello world")).to eq []
-end
+  end
 
-it "returns only the uppercase words given mixed words" do
+  it "returns only the uppercase words given mixed words" do
     result = extract_uppercase("hello WORLD")
     expect(result).to eq ["WORLD"]
-end
+  end
 
-it "returns all upercase words with a comma in between" do
+  it "returns all upercase words with a comma in between" do
     result = extract_uppercase("HELLO WORLD")
     expect(result).to eq ["HELLO", "WORLD"]
-end
+  end
 
-it "returns uppercase word only" do
+  it "returns uppercase word only" do
     result = extract_uppercase("hello WORLD!")
     expect(result).to eq ["WORLD"]
-end
+  end
 
-it "returns no words if there's a lowercase in the uppercase word" do
+  it "returns no words if there's a lowercase in the uppercase word" do
     result = extract_uppercase("hello WoRLD")
     expect(result).to eq []
-end
+  end
 end
