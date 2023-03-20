@@ -9,7 +9,7 @@ I want to see an estimate of reading time for a text, assuming that I can read 2
 '''ruby
 reading_time = count_words(text)
 
->> reading_time is an integet representing minutes
+>> reading_time is an integer representing minutes
 
 
 # 3. Create example Tests
