@@ -7,22 +7,23 @@ I want to verify that a text starts with a capital letter and ends with a suitab
 # 2. Design the Method Signature
 
 1. Use Ruby
-2. def grammar_check(text) = a method that will use .capitalize and gsub/regex to check for capital letter for first word of a string and and full stop at the end of a string.
+2. def grammar_check(text) = a method that will use if statements, upcase & end_with? methods
 
 # 3. Create example Tests
 
 require grammar_check for a string
 
+<!-- if text is emply -->
+=> Nothing there, try again!
 
 <!-- No capital letter +  no full stop -->
-=> Please begin the sentence with a capital letter and end the sentence wiht a full stop.
+=> Try again
 
 <!-- No capital letter + full stop -->
-=> Please begin the sentence with a capital letter.
+=> Try again
 
 <!-- Capital letter + no full stop -->
-=> Please end the sentence wiht a full stop.
-
+=> Try again
 <!-- Capital letter + full stop -->
 => Your sentence is correct!
 
