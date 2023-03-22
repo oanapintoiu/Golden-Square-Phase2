@@ -1,17 +1,15 @@
 class Gratitudes
+  def initialize
+    @gratitudes = []
+  end
 
-    def initialize
-        @gratitudes = []
+  def add(gratitude)
+    @gratitudes << gratitude
+  end
 
-    end 
-
-    def add(gratitude)
-        @gratitudes << gratitude
-    end
-
-def format
+  def format
     prefix = "Be grateful for: "
     formatted_gratitudes = @gratitudes.join(", ")
     return prefix + formatted_gratitudes
-end
+  end
 end
