@@ -3,7 +3,6 @@ class DiaryEntry
     # ...
     @title = title
     @contents = contents
-    # @text_start = 0
     @text_start = 0 
   end
 
