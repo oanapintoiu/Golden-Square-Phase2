@@ -52,19 +52,18 @@ RSpec.describe DiaryEntry do
     expect(chunk).to eq "one two"
   end
 
+    it "returns next chunk next time it is called" do
+      diary_entry = DiaryEntry.new("my_title", "one two three")
+      diary_entry.reading_chunk(2, 1)
+      chunk = diary_entry.reading_chunk(2, 1)
+      expect(chunk).to eq "three"
+    end
 
-#   it "returns next chunk next time it is called" do
-#     diary_entry = DiaryEntry.new("my_title", "one two three")
-#     diary_entry.reading_chunk(2, 1)
-#     chunk = diary_entry.reading_chunk(2, 1)
-#     expect(chunk).to eq "three"
-#   end
-
-#   it "restarts after reading the whole contents" do
-#     diary_entry = DiaryEntry.new("my_title", "one two three")
-#     diary_entry.reading_chunk(2, 1)
-#     diary_entry.reading_chunk(2, 1)
-#     chunk = diary_entry.reading_chunk(2, 1)
-#     expect(chunk).to eq "one two"
-#   end
+    it "restarts after reading the whole contents" do
+      diary_entry = DiaryEntry.new("my_title", "one two three")
+      diary_entry.reading_chunk(2, 1)
+      diary_entry.reading_chunk(2, 1)
+      chunk = diary_entry.reading_chunk(2, 1)
+      expect(chunk).to eq "End"
+    end
 end
