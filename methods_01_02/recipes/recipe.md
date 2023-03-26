@@ -23,7 +23,7 @@ Make a list of examples of what the method will take and return.
 
 # EXAMPLE
 
->> extract_uppercase("hello WORLD") => ["WORLD"]
+>>extract_uppercase("hello WORLD") => ["WORLD"]
 >>extract_uppercase("HELLO WORLD") => ["HELLO", "WORLD"]
 >>extract_uppercase("hello world") => []
 >>extract_uppercase("hello WoRLD") => []
